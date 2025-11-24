@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNEngine — Unity Visual Novel Package</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">SNEngine</div>
+    <nav class="nav">
+      <a href="#main">Main</a>
+      <a href="#download">Download</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="main">
+    <h2>Create Visual Novels in Unity Without Complex Coding</h2>
+    <p>Scene editor, dialogue builder, and export directly in Unity.</p>
+    <div class="hero-buttons">
+      <button class="cta" onclick="window.open('https://github.com/YourRepo', '_blank')">Download / GitHub</button>
+      <button class="author-btn" onclick="window.open('https://authorwebsite.com', '_blank')">Author</button>
+    </div>
+    <img src="images/promo.png" alt="Promo Image">
+  </section>
+
+  <section class="platforms">
+    <div class="platform">
+      <img src="images/android.png" alt="Android">
+      <span>Android</span>
+    </div>
+    <div class="platform">
+      <img class="ios-light" src="images/ios-light.png" alt="iOS Light">
+      <img class="ios-dark" src="images/ios-dark.png" alt="iOS Dark">
+      <span>iOS</span>
+    </div>
+    <div class="platform">
+      <img src="images/web.png" alt="Web / PC">
+      <span>Web / PC</span>
+    </div>
+    <div class="platform">
+      <img src="images/playstation.png" alt="PlayStation">
+      <span>Consoles</span>
+    </div>
+  </section>
+
+<section class="section" id="download">
+  <h2>Included Features</h2>
+  <div class="features-list">
+    <div class="feature reveal left">
+      <img src="images/feature1.png" alt="Dialogue System">
+      <p>Node-based Dialogue System</p>
+    </div>
+    <div class="feature reveal right">
+      <img src="images/feature2.png" alt="Main Menu">
+      <p>Main Menu</p>
+    </div>
+    <div class="feature reveal left">
+      <img src="images/feature3.png" alt="Save System">
+      <p>Ready-to-use Save System</p>
+    </div>
+    <div class="feature reveal right">
+      <img src="images/feature4.png" alt="Shaders">
+      <p>Shaders</p>
+    </div>
+    <div class="feature reveal left">
+      <img src="images/feature5.png" alt="Customization">
+      <p>Customization</p>
+    </div>
+    <div class="feature reveal right">
+      <img src="images/feature6.png" alt="Addons">
+      <p>Addons & Plugin Extension</p>
+    </div>
+    <div class="feature reveal left">
+      <img src="images/feature7.png" alt="Input System">
+      <p>Cross-platform Input System</p>
+    </div>
+    <div class="feature reveal right">
+      <img src="images/feature8.png" alt="Easy Localization">
+      <p>Easy Localization for Games</p>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="footer">
+    © <span id="currentYear"></span> SNEngine
+  </footer>
+
+  <script>
+    // Автоматическое обновление года
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Reveal анимация при скролле
+    const reveals = document.querySelectorAll('.reveal');
+    function revealOnScroll() {
+      const trigger = window.innerHeight * 0.85;
+      reveals.forEach(el => {
+        const rect = el.getBoundingClientRect().top;
+        if (rect < trigger && rect + el.offsetHeight > 0) {
+          el.classList.add('visible');
+        } else {
+          el.classList.remove('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('resize', revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>
