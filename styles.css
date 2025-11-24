@@ -91,6 +91,16 @@ body {
     background: #555;
 }
 
+/* Demo Game button (фиолетовый) */
+.demo-btn {
+    background-color: #9b59b6;
+    color: white;
+}
+
+.demo-btn:hover {
+    background-color: #8e44ad;
+}
+
 /* Section */
 .section {
     padding: 60px 20px;
@@ -188,6 +198,8 @@ body {
     .feature:nth-child(even) { background: rgba(50,50,50,0.2); }
     .cta { background: #b10000; color: white; }
     .cta:hover { background: #d60000; }
+    .demo-btn { background-color: #8e44ad; }
+    .demo-btn:hover { background-color: #9b59b6; }
     .ios-light { display: none; }
     .ios-dark { display: inline; }
 }
@@ -205,7 +217,7 @@ body {
     .nav { flex-wrap: wrap; gap: 10px; width: 100%; }
     .hero { padding: 40px 15px; }
     .hero img { width: 100%; max-width: 100%; height: auto; }
-    .cta, .author-btn { width: 100%; text-align: center; font-size: 14px; padding: 10px 0; margin-top: 15px; margin-bottom: 30px; }
+    .cta, .author-btn, .demo-btn { width: 100%; text-align: center; font-size: 14px; padding: 10px 0; margin-top: 15px; margin-bottom: 30px; }
     .section { padding: 40px 15px; }
     .section h2 { font-size: 24px; }
     .platforms { flex-direction: column; gap: 20px; }
@@ -221,5 +233,5 @@ body {
     .nav { gap: 8px; }
     .hero { padding: 30px 10px; }
     .section h2 { font-size: 20px; }
-    .cta, .author-btn { font-size: 13px; padding: 8px 0; margin-top: 12px; margin-bottom: 20px; }
+    .cta, .author-btn, .demo-btn { font-size: 13px; padding: 8px 0; margin-top: 12px; margin-bottom: 20px; }
 }
